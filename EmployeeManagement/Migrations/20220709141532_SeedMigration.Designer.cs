@@ -48,7 +48,7 @@ namespace EmployeeManagement.Migrations
                         {
                             EmployeeId = 1,
                             EmployeeDept = 1,
-                            EmployeeEmail = "sudhanshu@ventla.io",
+                            EmployeeEmail = "sudhanshu@gmail.com",
                             EmployeeName = "Sudhanshu"
                         });
                 });

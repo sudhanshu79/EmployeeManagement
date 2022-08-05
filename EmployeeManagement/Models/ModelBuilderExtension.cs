@@ -12,14 +12,14 @@ namespace EmployeeManagement.Models
                 EmployeeId = 1,
                 EmployeeName = "Sudhanshu",
                 EmployeeDept = Dept.Mobility,
-                EmployeeEmail = "sudhanshu@ventla.io"
+                EmployeeEmail = "sudhanshu@gmail.com"
             },
             new Employee
             {
                 EmployeeId = 2,
                 EmployeeName = "Gopal",
                 EmployeeDept = Dept.Admin,
-                EmployeeEmail = "gopal@ventla.io"
+                EmployeeEmail = "gopal@gmail.com"
             }
             );
         }

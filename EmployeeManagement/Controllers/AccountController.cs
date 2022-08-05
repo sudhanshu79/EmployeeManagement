@@ -80,7 +80,7 @@ namespace EmployeeManagement.Controllers
                 return View();
             }
             ViewBag.ErrorTitle = "Registration failed";
-            ViewBag.ErrorMessage = "Please contact Sudhanshu.s@ventla.io";
+            ViewBag.ErrorMessage = "Please contact Sudhanshu.s@gmail.com";
             return View("Error");
         }
 
@@ -195,7 +195,7 @@ namespace EmployeeManagement.Controllers
                 }
             }
             ViewBag.ErrorTitle = $"Email verification failed with the external login provider";
-            ViewBag.ErrorMessage = $"Please contact sudhanshu.s@ventla.io";
+            ViewBag.ErrorMessage = $"Please contact sudhanshu.s@gmail.com";
             return View("Error");
         }
 

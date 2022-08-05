@@ -13,7 +13,7 @@ namespace EmployeeManagement.ViewModels.Account
         [Required]
         [EmailAddress]
         [Remote(action: "IsEmailInUse", controller: "account")]
-        [ValidEmailDomain(allowedDomain: "ventla.io", ErrorMessage = "Emails are allowed only with domain ventla.io")]
+        [ValidEmailDomain(allowedDomain: "gmail.com", ErrorMessage = "Emails are allowed only with domain gmail.com")]
         public string Email { get; set; }
 
         [Required]

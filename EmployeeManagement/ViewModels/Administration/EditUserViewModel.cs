@@ -16,7 +16,7 @@ namespace EmployeeManagement.ViewModels.Administration
         public string UserName { get; set; }
         [Required]
         [EmailAddress]
-        [ValidEmailDomain(allowedDomain: "ventla.io", ErrorMessage = "Only ventla.io domain is allowed")]
+        [ValidEmailDomain(allowedDomain: "gmail.com", ErrorMessage = "Only gmail.com domain is allowed")]
         public string Email { get; set; }
 
         public string City { get; set; }

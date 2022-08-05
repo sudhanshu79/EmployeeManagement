@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TULJqhdrhAIRPhUxBOFbtD7oDEcuBmzZ2KBZuWCbCRMGawGhlWRwixXVRQ35fcTg2YGnmtkTXxLaAKry7nCIzQ==",
+  "dgSpecHash": "aWzgFUzGy2Q8ISGFuq7eAENhCB12bsRAL+xQHe3KJqSWybzFLjsy/vDAjnXe9owR4MNSi4KzFjGvu8QcKBuKzA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MeetApp\\source\\repos\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.csproj",
+  "projectFilePath": "C:\\Users\\MeetApp\\source\\repos\\sudhanshu79\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MeetApp\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\3.1.27\\microsoft.aspnetcore.authentication.facebook.3.1.27.nupkg.sha512",
     "C:\\Users\\MeetApp\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.27\\microsoft.aspnetcore.authentication.google.3.1.27.nupkg.sha512",

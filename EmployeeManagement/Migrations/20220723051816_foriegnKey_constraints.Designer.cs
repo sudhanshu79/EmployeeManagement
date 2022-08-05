@@ -52,14 +52,14 @@ namespace EmployeeManagement.Migrations
                         {
                             EmployeeId = 1,
                             EmployeeDept = 1,
-                            EmployeeEmail = "sudhanshu@ventla.io",
+                            EmployeeEmail = "sudhanshu@gmail.com",
                             EmployeeName = "Sudhanshu"
                         },
                         new
                         {
                             EmployeeId = 2,
                             EmployeeDept = 2,
-                            EmployeeEmail = "gopal@ventla.io",
+                            EmployeeEmail = "gopal@gmail.com",
                             EmployeeName = "Gopal"
                         });
                 });

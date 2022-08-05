@@ -10,12 +10,12 @@ namespace EmployeeManagement.Models.Employees
         public MockEmployeeRepository()
         {
             Employees = new List<Employee>();
-            Employees.Add(new Employee() { EmployeeId = 101, EmployeeName = "Sudhanshu Sharma", EmployeeDept = Dept.Mobility, EmployeeEmail = "sudhanshu.s@ventla.io" });
-            Employees.Add(new Employee() { EmployeeId = 102, EmployeeName = "Gopal Awasthi", EmployeeDept = Dept.Mobility, EmployeeEmail = "gopal@ventla.io" });
+            Employees.Add(new Employee() { EmployeeId = 101, EmployeeName = "Sudhanshu Sharma", EmployeeDept = Dept.Mobility, EmployeeEmail = "sudhanshu.s@gmail.com" });
+            Employees.Add(new Employee() { EmployeeId = 102, EmployeeName = "Gopal Awasthi", EmployeeDept = Dept.Mobility, EmployeeEmail = "gopal@gmail.com" });
             Employees.Add(new Employee() { EmployeeId = 103, EmployeeName = "Arun Mehra", EmployeeDept = Dept.Mobility, EmployeeEmail = "arun@yopmail.com" });
             Employees.Add(new Employee() { EmployeeId = 104, EmployeeName = "Sakshi Gupta", EmployeeDept = Dept.QA, EmployeeEmail = "Sakshi@mailinaor.com" });
             Employees.Add(new Employee() { EmployeeId = 105, EmployeeName = "Neelam Singh", EmployeeDept = Dept.QA, EmployeeEmail = "neelam@gmail.com" });
-            Employees.Add(new Employee() { EmployeeId = 106, EmployeeName = "Khwahish Batra", EmployeeDept = Dept.Admin, EmployeeEmail = "khwahish@ventla.io" });
+            Employees.Add(new Employee() { EmployeeId = 106, EmployeeName = "Khwahish Batra", EmployeeDept = Dept.Admin, EmployeeEmail = "khwahish@gmail.com" });
         }
         public Employee GetEmployee(int id)
         {
