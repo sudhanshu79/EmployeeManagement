@@ -1,0 +1,31 @@
+﻿.employee-photo {
+    height: 300px;
+    width: auto;
+}
+
+.left-icon-holder {
+    position: relative;
+}
+
+    .left-icon-holder .img-icon {
+        position: absolute;
+        line-height: 24px;
+        top: 50%;
+        margin-top: -12px; /* Half of line height to keep left middle postion of container */
+        left: 10px;
+        margin-right: 15px;
+    }
+
+.google-btn {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+    padding: 0.375rem 0.75rem;
+}
+
+.facebook-btn {
+    color: #fff;
+    background-color: #4267B2;
+    border-color: #4267B2;
+    padding: 0.375rem 0.75rem;
+}
