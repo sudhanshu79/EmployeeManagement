@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace EmployeeManagement
 {
@@ -56,15 +57,26 @@ namespace EmployeeManagement
                 options.Password.RequiredLength = 8;
                 options.Password.RequiredUniqueChars = 3;
                 options.SignIn.RequireConfirmedEmail = true;
+                options.Tokens.EmailConfirmationTokenProvider = "ConfirmedEmailTokenProvider";
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+                options.Lockout.MaxFailedAccessAttempts = 3;
+
             }).AddEntityFrameworkStores<AppDbContext>()
-            .AddDefaultTokenProviders();
+            .AddDefaultTokenProviders()
+            .AddTokenProvider<CustomConfirmedEmailTokenProvider<ApplicationUser>>("ConfirmedEmailTokenProvider");
 
             services.ConfigureApplicationCookie(option =>
             {
                 option.AccessDeniedPath = new PathString("/Administration/AccessDenied");
             });
+
+            services.Configure<DataProtectionTokenProviderOptions>(option =>
+            {
+                option.TokenLifespan = TimeSpan.FromHours(3);
+            });
             services.AddSingleton<IAuthorizationHandler, CanEditAdminsOwnRolesAndClaimsHandler>();
             services.AddSingleton<IAuthorizationHandler, SuperAdminHandler>();
+            services.AddSingleton<ProtectionPurposeStrings>();
 
             services.AddAuthentication().AddGoogle(options =>
             {
@@ -76,6 +88,14 @@ namespace EmployeeManagement
              {
                  options.AppId = configuaration.GetSection("ExternalLoginProviderStrings").GetSection("Facebook").GetValue<string>("AppId");
                  options.AppSecret = configuaration.GetSection("ExternalLoginProviderStrings").GetSection("Facebook").GetValue<string>("AppSecret");
+             })
+             .AddMicrosoftAccount(options => {
+                 options.ClientId = configuaration.GetSection("ExternalLoginProviderStrings").GetSection("Microsoft").GetValue<string>("ClientId");
+                 options.ClientSecret = configuaration.GetSection("ExternalLoginProviderStrings").GetSection("Microsoft").GetValue<string>("ClientSecret");
+             })
+             .AddTwitter(options=> {
+                 options.ConsumerKey = configuaration.GetSection("ExternalLoginProviderStrings").GetSection("Twitter").GetValue<string>("ConsumerKey");
+                 options.ConsumerSecret = configuaration.GetSection("ExternalLoginProviderStrings").GetSection("Twitter").GetValue<string>("ConsumerSecret");
              });
         }
 

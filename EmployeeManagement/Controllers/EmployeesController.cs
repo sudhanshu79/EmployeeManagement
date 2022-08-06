@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Hosting;
 using System;
 using System.IO;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.DataProtection;
+using EmployeeManagement.Security;
+using System.Linq;
 
 namespace EmployeeManagement.Controllers
 {
@@ -12,21 +15,30 @@ namespace EmployeeManagement.Controllers
     {
         private IEmployeeRepository EmployeeRepository;
         private readonly IWebHostEnvironment hostingEnvironment;
+        private IDataProtector protector;
 
         public EmployeesController(IEmployeeRepository employeeRepository,
-                                    IWebHostEnvironment hostingEnvironment)
+                                    IWebHostEnvironment hostingEnvironment,
+                                    IDataProtectionProvider protectionProvider,
+                                    ProtectionPurposeStrings protectionPurposeStrings)
         {
             EmployeeRepository = employeeRepository;
             this.hostingEnvironment = hostingEnvironment;
+            this.protector = protectionProvider.CreateProtector(protectionPurposeStrings.EMPLOYEED_ID_PURPOSE_STRING);
         }
         public ViewResult Index()
         {
-            return View(EmployeeRepository.GetEmployeesList());
+            return View(EmployeeRepository.GetEmployeesList().Select(e =>
+            {
+                e.EncryptedEmployeeId = protector.Protect(Convert.ToString(e.EmployeeId));
+                return e;
+            }).ToList());
         }
 
-        public ViewResult Details(int? id)
+        public ViewResult Details(string id)
         {
-            var employeeModel = EmployeeRepository.GetEmployee(id ?? 101);
+            var decryptedId = Convert.ToInt32(protector.Unprotect(id));
+            var employeeModel = EmployeeRepository.GetEmployee(decryptedId);
 
             if (employeeModel == null)
             {

@@ -28,7 +28,8 @@
                     </label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">Login</button>   <br />
+            <a asp-action="forgotpassword">Forgot password?</a>
         </form>
 
         @if (Model.ExternalAuthenticationSchemes?.Any() == true)
@@ -38,7 +39,11 @@
                 <form method="post" asp-action="ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl">
                     @foreach (var provider in Model.ExternalAuthenticationSchemes)
                     {
-                        var imgPath = "~/images/"+provider.Name.ToLower() + ".png";
+                        if (Model.ExternalAuthenticationSchemes.IndexOf(provider) % 2 == 0)
+                        {
+                            <br /> <br />
+                        }
+                        var imgPath = "~/images/" + provider.Name.ToLower() + ".png";
                         <button type="submit" class="left-icon-holder @(provider.Name.ToLower()+"-btn")" name="provider" value="@provider.Name" title="Click to sign-in with your @provider.DisplayName account">
                             @if (!string.IsNullOrWhiteSpace(imgPath))
                             {

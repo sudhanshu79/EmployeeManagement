@@ -1,10 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EmployeeManagement.Models.Employees
 {
     public class Employee
     {
         public int EmployeeId { get; set; }
+        [NotMapped]
+        public string EncryptedEmployeeId { get; set; }
 
         [Required(ErrorMessage = "Please enter name")]
         [MaxLength(30, ErrorMessage = "Name is too long,30 characters are allowed")]

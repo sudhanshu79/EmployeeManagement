@@ -11,7 +11,7 @@
             <div class="card-header"><h3>@employee.EmployeeName</h3></div>
             <img class="card-img-top employee-photo" src="@photoPath" asp-append-version="true" />
             <div class="card-footer text-center">
-                <a asp-controller="employees" asp-action="details" asp-route-id="@employee.EmployeeId" class="btn btn-primary m-1">View</a>
+                <a asp-controller="employees" asp-action="details" asp-route-id="@employee.EncryptedEmployeeId" class="btn btn-primary m-1">View</a>
                 <a asp-controller="employees" asp-action="editemployee" asp-route-id="@employee.EmployeeId" class="btn btn-primary m-1">Edit</a>
                 <a href="#" class="btn btn-danger m-1">Delete</a>
             </div>

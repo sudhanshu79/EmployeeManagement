@@ -277,3 +277,10 @@ C:\Users\MeetApp\source\repos\sudhanshu79\EmployeeManagement\EmployeeManagement\
 C:\Users\MeetApp\source\repos\sudhanshu79\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.dll
 C:\Users\MeetApp\source\repos\sudhanshu79\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.pdb
 C:\Users\MeetApp\source\repos\sudhanshu79\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.genruntimeconfig.cache
+C:\Users\MeetApp\source\repos\sudhanshu79\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\forgotpassword.cshtml.g.cs
+C:\Users\MeetApp\source\repos\sudhanshu79\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\resetpassword.cshtml.g.cs
+C:\Users\MeetApp\source\repos\sudhanshu79\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPasswordSuccess.cshtml.g.cs
+C:\Users\MeetApp\source\repos\sudhanshu79\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\changepassword.cshtml.g.cs
+C:\Users\MeetApp\source\repos\sudhanshu79\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\AccountLockedout.cshtml.g.cs
+C:\Users\MeetApp\source\repos\sudhanshu79\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll
+C:\Users\MeetApp\source\repos\sudhanshu79\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Twitter.dll

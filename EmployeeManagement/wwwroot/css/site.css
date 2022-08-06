@@ -21,6 +21,7 @@
     background-color: #343a40;
     border-color: #343a40;
     padding: 0.375rem 0.75rem;
+    width:250px;
 }
 
 .facebook-btn {
@@ -28,4 +29,21 @@
     background-color: #4267B2;
     border-color: #4267B2;
     padding: 0.375rem 0.75rem;
+    width: 250px;
+}
+
+.microsoft-btn {
+    color: #4267B2;
+    background-color: white;
+    border-color: #4267B2;
+    padding: 0.375rem 0.75rem;
+    width: 250px;
+}
+
+.twitter-btn {
+    color: #fff;
+    background-color: #00acee;
+    border-color: #00acee;
+    padding: 0.375rem 0.75rem;
+    width: 250px;
 }

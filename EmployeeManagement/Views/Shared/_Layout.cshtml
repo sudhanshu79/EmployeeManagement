@@ -48,6 +48,16 @@
                 }
                 @if (signInManager.IsSignedIn(User))
                 {
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color:white;" href="#" id="navbarDropdownMenuLinkPwd"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Account
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkPwd">
+                            <a class="dropdown-item" asp-controller="Account"
+                               asp-action="ChangePassword">Change Password</a>
+                        </div>
+                    </div>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <form method="post" asp-action="Logout" asp-controller="account">
